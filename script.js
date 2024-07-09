@@ -2,11 +2,50 @@
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
   // specify the size/width/length of board grid/canvas size
+  const grid=20;
+  const count=0;
   //specify where the snake will start and what direction  it will start moving 
+  let snake = {
+    x: 10,
+    y: 10,
+  
+    // snake velocity. moves one grid length every frame in either the x or y direction
+    dx: grid,
+    dy: 0,
+  
+    // keep track of all grids the snake body occupies
+    cells: [],
+  
+    // length of the snake. grows when eating an apple
+    maxCells: 4
+  };
+  let food = {
+    x: 5,
+    y: 5
+  };
+  
+  function draw() {
+    gameCanvas.innerHTML = '';
+
+    // Draw snake
+    snake.forEach(segment => {
+      const snakeElement = document.createElement('div');
+      snakeElement.style.left = `${segment.x * grid}px`;
+      snakeElement.style.top = `${segment.y * grid}px`;
+      snakeElement.classList.add('snake');
+      gameBoard.appendChild(snakeElement);
+  });
+
+   // Draw food
+   const foodElement = document.createElement('div');
+   foodElement.style.left = `${food.x * grid}px`;
+   foodElement.style.top = `${food.y * grid}px`;
+   foodElement.classList.add('food');
+   gameBoard.appendChild(foodElement);
+}
   // randomize where the food will appear on the board
   // let score start at 0
 
-/* As a user I want to see the word Snake in big letters*/
 
 /* I want to specify how big the areana/play area is */
 

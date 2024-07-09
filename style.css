@@ -1,32 +1,51 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body {
+  background: black;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+}
+canvas {
+  border: 6px solid rgb(106, 175, 231);
+}
+h1 {
+  text-align: center;
+  color: rgb(57, 219, 106) ;
+  font-size: 40px;
+}
+
 /* As a user I want to see the word Snake in big letters*/
+.press-start-2p-regular {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal; 
+  
+}
 
-/* I want to specify how big the areana/play area is */
+#Start {
+  background-color: rgb(82, 209, 82);
+  font-size: 25px;
+  margin-top: 8px;
+  text-align: center;
+}
 
-/* I want to specify the borders so if the snake hits the border its game over */
+.snake {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #00ff00;
+}
 
-/* 
-As a user I want Game Over to pop up on the screen */
-
-/* As a user I want the high score to always be displayed even if restarting the game */
-
-/* If high score is beaten show "New High Score" on screen  */
-
-/* If new high score is not beaten show "Better Luck Next Time" */
-
-/* As a user I want to also have a play button */
-
-/*  As a user I want the choice of difficulty to pop up one being easy medium or difficult. easy will be slower medium will be normal speed and difficult will be fast */
-
-/* Create visual for buttons */
-
-/* Creat visual for the food/blocks that the snake eats */
-
-/* As a user I want the snack to grow by 1 block for every block/food it eats. Grow by 2 if it eats the bonus item.  */
-
-/* As a user I want a score to show and increase for every block that I eat by 50 points */
-
-/*  At random times I want a bonus item to show up woth 200 points. I want it to dissappear if not gotten in a certain amount of time */
-
-
-/* As a user I want a restart button to pop up once I lose */
-
+.food {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #ff0000;
+}
