@@ -28,24 +28,10 @@ h1 {
   font-style: normal; 
   
 }
-
-#Start {
+/* Creat visual for Start Button */
+#Reset {
   background-color: rgb(82, 209, 82);
   font-size: 25px;
   margin-top: 8px;
   text-align: center;
-}
-
-.snake {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background-color: #00ff00;
-}
-
-.food {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background-color: #ff0000;
 }
