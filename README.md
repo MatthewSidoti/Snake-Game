@@ -7,7 +7,7 @@ https://github.com/user-attachments/assets/0cf5e2a8-8648-40b7-b375-482ca255f53f
 
 
 Getting Started!
-To start playing the game click on this link (
+To start playing the game click on this link (https://matthewsidoti.github.io/Snake-Game/)
 
 How to Play:
 Use W A S D or your Arrow Keys to move the snake.
