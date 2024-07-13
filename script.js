@@ -15,24 +15,22 @@ let snakeY = 10;
 // keep track of all grids the snake body occupies
 const snakeBody = [];
 let tailLength = 0;
-// snake velocity. moves one grid length every frame in either the x or y direction
+
 class snakesBody {
   constructor(x, y) {
     this.x = x;
     this.y = y;
   }
 }
-
+// set speed
 let speed = 6;
-
+//set direction
 let inputsXDirection = 0;
 let inputsYDirection = 0;
 
 let xDirection = 0;
 let yDirection = 0;
-/* As a user I want the snake to grow by 1 block for every block/food it eats.*/
-// length of the snake. grows when eating food
-
+//starting food placement
 let foodX = 5;
 let foodY = 5;
 
@@ -54,14 +52,14 @@ function drawGame() {
   drawSnake();
   drawFood();
   drawScore();
-
+// Change speed
   if (score > 300) {
     speed = 9;
   }
   if (score > 900) {
     speed = 11;
   }
-
+// updates the drawGame loop at 1000 ms
   setTimeout(drawGame, 1000 / speed);
 }
 
@@ -70,7 +68,8 @@ function clearCanvas() {
   ctx.fillStyle = "black";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 }
-
+/* As a user I want the snake to grow by 1 block for every block/food it eats.*/
+// length of the snake. grows when eating food
 function drawSnake() {
   ctx.fillStyle = "teal";
   for (let i = 0; i < snakeBody.length; i++) {
@@ -150,7 +149,7 @@ function isGameOver() {
 
 // In JS I want to specify what buttons control what. I need an up, down, left, right controls.
 document.body.addEventListener("keydown", keyDown);
-
+// snake direction. moves one grid length every frame in either the x or y direction
 function keyDown(event) {
   // up
   if (event.keyCode == 38 || event.keyCode == 87) {
@@ -184,6 +183,7 @@ function keyDown(event) {
     inputsXDirection = 1;
   }
 }
+/* As a user I want a reset button */
 function resetGame() {
   clearTimeout(drawGame);
   snakeX = 10;
@@ -206,42 +206,7 @@ document.getElementById("Reset").addEventListener("click", resetGame);
 
 drawGame();
 
-/* As a user I want a reset button */
 
-// In JS I need to create a click function for all my buttons
 
-// Click Reset
 
-// NTH- Click Easy
 
-// NTH-Click Medium
-
-// NTH-Click Hard
-
-// Click Restart
-
-/*----------- Event Listeners ----------*/
-
-// In JS I want to specify what buttons control what. I need an up, down, left, right controls.
-
-// Create a listener for when the snake hits the border or itself the game is over
-
-// Nice to Have
-
-/* NTH-As a user I want the high score to always be displayed even if restarting the game */
-
-/* NTH-If high score is beaten show "New High Score" on screen  */
-
-/* NTH-If new high score is not beaten show "Better Luck Next Time" */
-
-/* NTH- As a user I want the choice of difficulty to pop up one being easy, medium, or difficult. easy will be slower medium will be normal speed and difficult will be fast */
-
-// NTH-Click Easy
-
-// NTH-Click Medium
-
-// NTH-Click Hard
-
-/*  NTH-At random times I want a bonus item to show up with 200 points. I want it to disappear if not gotten in a certain amount of time */
-
-// NTH-Grow by 2 if it eats the bonus item
